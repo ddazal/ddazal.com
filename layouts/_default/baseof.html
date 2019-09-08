@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132671209-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-132671209-1');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{ .Site.Title }}</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400" rel="stylesheet">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/default.css">
+</head>
+
+<body class="antialiased bg-gray-100 text-gray-900 mx-auto px-4 sm:max-w-xl md:max-w-2xl">
+  <main class="py-10">
+    {{ block "main" . }}{{ end }}
+  </main>
+</body>
+
+</html>
