@@ -1,6 +1,7 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "David Daza"
+googleAnalytics = "UA-132671209-1"
 
 [blackfriday]
 hrefTargetBlank = true
