@@ -1,20 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  {{ template "_internal/google_analytics_async.html" . }}
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Full Stack Developer. Code enthusiasm."/>
-  <title>{{ .Site.Title }}</title>
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400" rel="stylesheet">
-  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/default.css">
+  {{ partial "head.html" . }}
 </head>
 
-<body class="antialiased bg-gray-100 text-gray-900 mx-auto px-4 sm:max-w-xl md:max-w-2xl">
+<body class="antialiased font-roboto bg-white text-gray-900 mx-auto px-4 sm:max-w-xl md:max-w-2xl">
+  {{ partial "header.html" . }}
   <main class="py-10">
     {{ block "main" . }}{{ end }}
   </main>
