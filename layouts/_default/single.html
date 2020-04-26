@@ -8,7 +8,7 @@
   <div class="post-content mt-8">
     {{ if .Params.images }}
       <figure>
-        <img src="{{ index .Params.images 0 }}" {{ with .Params.attribution }}alt="{{ . | markdownify }}"{{end}}>
+        <img src="{{ index .Params.images 0 | absURL }}" {{ with .Params.attribution }}alt="{{ . | markdownify }}"{{end}}>
         {{ with .Params.attribution }}
           <figcaption>
             <p>{{ . | markdownify }}</p>

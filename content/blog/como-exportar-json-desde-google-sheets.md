@@ -5,7 +5,7 @@ draft: false
 author: "David Daza"
 description: "Utiliza Google Apps Script para exportar los registros de una base de datos disponible en Google Sheets en formato JSON."
 images:
-  - "/media/gas_cover.webp"
+  - "media/gas_cover.webp"
 attribution: "Foto por [Arif Riyanto](https://unsplash.com/photos/1DRq1ZsE2N0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) en Unsplash"
 ---
 
