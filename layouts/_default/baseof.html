@@ -2,12 +2,13 @@
 <html lang="es">
 <head>
   {{ partial "head.html" . }}
+  {{ block "meta" . }}{{ end }}
 </head>
 
 <body class="antialiased font-roboto bg-white text-gray-900 mx-auto px-4 sm:max-w-xl md:max-w-2xl">
   {{ partial "header.html" . }}
   <main class="py-10">
-    {{ block "main" . }}{{ end }} 
+    {{ block "main" . }}{{ end }}
   </main>
 </body>
 

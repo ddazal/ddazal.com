@@ -6,9 +6,11 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="description" content="Full Stack Developer. Code enthusiasm."/>
 
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/twitter_cards.html" . }}
+
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Roboto&display=swap" rel="stylesheet">
 {{ $styles := resources.Get "styles/tailwind.pcss" | toCSS | postCSS }}
 <link rel="stylesheet" href="{{ $styles.Permalink }}">
-<link rel="stylesheet" href='{{ "css/monokai.css" | absURL }}'>
 
 <title>{{ .Site.Title }}</title>

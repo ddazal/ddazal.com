@@ -1,7 +1,21 @@
+{{ define "meta" }}
+<link rel="stylesheet" href='{{ "css/monokai.css" | absURL }}'>
+{{ end }}
+
 {{ define "main" }}
   <p class="text-base">{{ .Date.Format "January 2, 2006" }} · {{ .Params.author }}</p>
   <h1 class="font-open-sans font-semibold text-3xl leading-tight">{{ .Title }}</h1>
   <div class="post-content mt-8">
+    {{ if .Params.images }}
+      <figure>
+        <img src="{{ index .Params.images 0 }}" {{ with .Params.attribution }}alt="{{ . | markdownify }}"{{end}}>
+        {{ with .Params.attribution }}
+          <figcaption>
+            <p>{{ . | markdownify }}</p>
+          </figcaption>
+        {{end}}
+      </figure>
+    {{ end }}
     {{ .Content }}
   </div>
   <div class="mt-10">
