@@ -1,8 +1,10 @@
 baseURL = "/"
-languageCode = "en-us"
+languageCode = "es-es"
 title = "David Daza"
 googleAnalytics = "UA-132671209-1"
+disqusShortname = "ddazal"
 
-[blackfriday]
-hrefTargetBlank = true
-noreferrerLinks = true
+[markup]
+  [markup.highlight]
+    lineNos = true
+    tabWidth = 2
