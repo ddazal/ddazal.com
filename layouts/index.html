@@ -12,7 +12,9 @@
       {{ if $posts }}
         {{ range where .Site.RegularPages "Section" "blog" }}
           <div class="mt-6 pb-4 border-b">
-            <p class="text-sm">{{ .Date.Format "January 2, 2006" }}</p>
+            <p class="text-sm">
+              {{ index $.Site.Data.months (printf "%d" .Date.Month) }} {{ .Date.Day }}, {{ .Date.Year }}
+            </p>
             <h3 class="font-open-sans font-semibold text-xl text-teal-700 hover:underline">
               <a href="{{ .Permalink }}">{{ .Title }}</a>
             </h3>

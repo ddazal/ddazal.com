@@ -3,7 +3,7 @@
 {{ end }}
 
 {{ define "main" }}
-  <p class="text-base">{{ .Date.Format "January 2, 2006" }} · {{ .Params.author }}</p>
+  <p class="text-base">{{ index $.Site.Data.months (printf "%d" .Date.Month) }} {{ .Date.Day }}, {{ .Date.Year }} · {{ .Params.author }}</p>
   <h1 class="font-open-sans font-semibold text-3xl leading-tight">{{ .Title }}</h1>
   <div class="post-content mt-8">
     {{ if .Params.images }}
