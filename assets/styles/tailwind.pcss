@@ -2,7 +2,7 @@
 @tailwind components;
 
 .post-content {
-  @apply leading-relaxed text-lg;
+  @apply leading-relaxed text-base break-words;
 }
 
 .post-content > * {
@@ -47,8 +47,14 @@
   @apply text-sm text-center font-open-sans text-gray-700;
 }
 
-.highlight pre {
-  @apply p-2 text-sm;
+.chroma {
+  @apply p-2 text-sm overflow-x-auto;
+}
+
+@screen md {
+  .post-content {
+    @apply text-lg;
+  }
 }
 
 @tailwind utilities;
