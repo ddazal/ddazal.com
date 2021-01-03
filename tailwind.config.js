@@ -2,8 +2,14 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'open-sans': ['"Open Sans"', 'sans-serif'],
-        roboto: ['Roboto', 'sans-serif']
+        montserrat: ['Montserrat', 'sans-serif'],
+        hind: ['Hind', 'sans-serif']
+      },
+      colors: {
+        oxford: '#030027',
+        'fuzzy-wuzzy': '#c16e70',
+        'antique-brass': '#dc9e82',
+        beige: '#f2f3d9'
       }
     },
   },

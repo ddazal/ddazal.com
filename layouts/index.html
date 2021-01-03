@@ -1,36 +1,33 @@
 {{ define "main" }}
-  <section class="text-center">
-    <img class="w-40 h-40 object-top object-cover rounded-full mx-auto shadow" src='{{ "images/moi.jpg" | absURL }}' alt="David Daza">
-    <h1 class="mt-4 font-open-sans font-semibold text-3xl">David Daza</h1>
-    <div class="flex items-center justify-center space-x-1">
-      <a href="https://github.com/ddazal" target="_blank" rel="noopener noreferrer" title="Github">
-        <img class="w-4" src='{{ "images/github.png" | absURL }}' alt="">
-      </a>
-      <a href="https://twitter.com/_daviddaza" target="_blank" rel="noopener noreferrer" title="Twitter">
-        <img class="w-4" src='{{ "images/twitter.png" | absURL }}' alt="">
-      </a>
+  <section class="bg-oxford text-white px-4 py-16">
+    <div class="max-w-3xl mx-auto">
+      <div class="max-w-md">
+        <h1 class="text-4xl font-montserrat font-bold">Hola, soy David.</h1>
+        <p class="mt-10 text-xl font-light leading-snug">Soy desarrollador fullstack en <a class="text-fuzzy-wuzzy underline" href="https://www.datasketch.co" target="_blank" rel="noopener noreferrer">Datasketch</a>. Aquí comparto mis aprendizajes.</p>
+      </div>
     </div>
   </section>
-  <section class="mt-6 text-lg">
-    <p>Hola, soy David. Soy desarrollador fullstack, pero escribo código para frontend el 70% del tiempo en <a class="text-teal-700 underline" href="https://www.datasketch.co" target="_blank" rel="noopener noreferrer">Datasketch</a>. Y me encanta. Puedes escribirme por <a class="text-teal-700 underline" href="https://twitter.com/_daviddaza" target="_blank" rel="noopener noreferrer">Twitter</a>.</p>
-  </section>
-  <section class="mt-12">
-    <h2 class="font-open-sans font-semibold text-2xl">Blog</h2>
+  <div style="background: linear-gradient(to right,#dc9382, #c16e70);" class="h-2"></div>
+  <section class="px-4 py-16">
+    <div class="max-w-3xl mx-auto">
       {{ $posts := where .Site.RegularPages "Section" "blog" }}
       {{ if $posts }}
-        {{ range where .Site.RegularPages "Section" "blog" }}
-          <div class="mt-6 pb-4 border-b">
-            <p class="text-sm">
-              {{ index $.Site.Data.months (printf "%d" .Date.Month) }} {{ .Date.Day }}, {{ .Date.Year }}
-            </p>
-            <h3 class="font-open-sans font-semibold text-xl text-teal-700 hover:underline">
-              <a href="{{ .Permalink }}">{{ .Title }}</a>
-            </h3>
-            <p class="text-lg mt-4">{{ .Description }}</p>
-          </div>
-        {{ end }}
+        <div class="space-y-6">
+          {{ range where .Site.RegularPages "Section" "blog" }}
+            <div class="pb-4 border-b">
+              <p class="text-fuzzy-wuzzy font-semibold">
+                {{ index $.Site.Data.months (printf "%d" .Date.Month) }} {{ .Date.Day }}, {{ .Date.Year }}
+              </p>
+              <h3 class="font-montserrat font-bold text-2xl text-oxford hover:text-opacity-75">
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+              </h3>
+              <p class="text-lg mt-4 leading-snug">{{ .Description }}</p>
+            </div>
+          {{ end }}
+        </div>
       {{ else }}
         <p class="text-center text-lg">Aún no he escrito nada :(</p>
       {{ end }}
+    </div>
   </section>
 {{ end }}

@@ -3,22 +3,28 @@
 {{ end }}
 
 {{ define "main" }}
-  <p class="text-base">{{ index $.Site.Data.months (printf "%d" .Date.Month) }} {{ .Date.Day }}, {{ .Date.Year }} · {{ .Params.author }}</p>
-  <h1 class="font-open-sans font-semibold text-3xl leading-tight">{{ .Title }}</h1>
-  <div class="post-content mt-8">
-    {{ if .Params.images }}
-      <figure>
-        <img src="{{ index .Params.images 0 | absURL }}" {{ with .Params.attribution }}alt="{{ . | markdownify }}"{{end}}>
-        {{ with .Params.attribution }}
-          <figcaption>
-            <p>{{ . | markdownify }}</p>
-          </figcaption>
-        {{end}}
-      </figure>
-    {{ end }}
-    {{ .Content }}
-  </div>
-  <div class="mt-10">
-    {{ template "_internal/disqus.html" . }}
+  <div class="px-4 py-16">
+    <div class="max-w-3xl mx-auto">
+      <p class="text-fuzzy-wuzzy font-semibold">{{ index $.Site.Data.months (printf "%d" .Date.Month) }} {{ .Date.Day }}, {{ .Date.Year }} · {{ .Params.author }}</p>
+      <h1 class="font-montserrat font-bold text-3xl leading-tight text-oxford">
+        {{ .Title }}
+      </h1>
+      <div class="post-content mt-8">
+        {{ if .Params.images }}
+          <figure>
+            <img class="rounded-md" src="{{ index .Params.images 0 | absURL }}" {{ with .Params.attribution }} alt="{{ . | markdownify }}"{{end}}>
+            {{ with .Params.attribution }}
+              <figcaption>
+                <p>{{ . | markdownify }}</p>
+              </figcaption>
+            {{end}}
+          </figure>
+        {{ end }}
+        {{ .Content }}
+      </div>
+      <div class="mt-10">
+        {{ template "_internal/disqus.html" . }}
+      </div>
+    </div>
   </div>
 {{ end }}

@@ -1,0 +1,12 @@
+baseURL = "/"
+languageCode = "es-es"
+title = "David Daza"
+description = "Fullstack Developer. Code enthusiasm."
+googleAnalytics = "UA-132671209-1"
+disqusShortname = "ddazal"
+pygmentsUseClasses = true
+
+[markup]
+  [markup.highlight]
+    lineNos = true
+    tabWidth = 2
