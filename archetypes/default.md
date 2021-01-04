@@ -2,10 +2,11 @@
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: true
+show_cover: true
 author: "David Daza"
-attribution: ""
 description: ""
+attribution: ""
 images:
-  - "/media/"
+  - "media/"
 ---
 

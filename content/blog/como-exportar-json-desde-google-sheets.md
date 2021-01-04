@@ -2,6 +2,7 @@
 title: "Cómo exportar JSON desde Google Sheets"
 date: 2020-04-25T08:54:53-05:00
 draft: false
+show_cover: true
 author: "David Daza"
 description: "Utiliza Google Apps Script para exportar los registros de una base de datos disponible en Google Sheets en formato JSON."
 images:

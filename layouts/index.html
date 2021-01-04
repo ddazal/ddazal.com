@@ -7,22 +7,22 @@
       </div>
     </div>
   </section>
-  <div style="background: linear-gradient(to right,#dc9382, #c16e70);" class="h-2"></div>
+  <div class="bg-gradient-to-r from-antique-brass to-fuzzy-wuzzy h-2"></div>
   <section class="px-4 py-16">
     <div class="max-w-3xl mx-auto">
       {{ $posts := where .Site.RegularPages "Section" "blog" }}
       {{ if $posts }}
-        <div class="space-y-6">
+        <div class="space-y-10">
           {{ range where .Site.RegularPages "Section" "blog" }}
-            <div class="pb-4 border-b">
+            <article>
               <p class="text-fuzzy-wuzzy font-semibold">
                 {{ index $.Site.Data.months (printf "%d" .Date.Month) }} {{ .Date.Day }}, {{ .Date.Year }}
               </p>
-              <h3 class="font-montserrat font-bold text-2xl text-oxford hover:text-opacity-75">
+              <h3 class="font-montserrat font-bold text-2xl text-oxford">
                 <a href="{{ .Permalink }}">{{ .Title }}</a>
               </h3>
               <p class="text-lg mt-4 leading-snug">{{ .Description }}</p>
-            </div>
+            </article>
           {{ end }}
         </div>
       {{ else }}

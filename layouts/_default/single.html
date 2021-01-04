@@ -10,7 +10,7 @@
         {{ .Title }}
       </h1>
       <div class="post-content mt-8">
-        {{ if .Params.images }}
+        {{ if and .Params.images .Params.show_cover }}
           <figure>
             <img class="rounded-md" src="{{ index .Params.images 0 | absURL }}" {{ with .Params.attribution }} alt="{{ . | markdownify }}"{{end}}>
             {{ with .Params.attribution }}
