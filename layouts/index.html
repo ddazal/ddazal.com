@@ -14,15 +14,7 @@
       {{ if $posts }}
         <div class="space-y-10">
           {{ range where .Site.RegularPages "Section" "blog" }}
-            <article>
-              <p class="text-fuzzy-wuzzy font-semibold">
-                {{ index $.Site.Data.months (printf "%d" .Date.Month) }} {{ .Date.Day }}, {{ .Date.Year }}
-              </p>
-              <h3 class="font-montserrat font-bold text-2xl text-oxford">
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
-              </h3>
-              <p class="text-lg mt-4 leading-snug">{{ .Description }}</p>
-            </article>
+            {{ partial "article.html" . }}
           {{ end }}
         </div>
       {{ else }}

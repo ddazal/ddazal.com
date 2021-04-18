@@ -1,0 +1,9 @@
+<article>
+  <p class="text-tuscan-red font-semibold">
+    {{ index $.Site.Data.months (printf "%d" .Date.Month) }} {{ .Date.Day }}, {{ .Date.Year }}
+  </p>
+  <h2 class="font-montserrat font-bold text-2xl text-oxford">
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+  </h2>
+  <p class="text-lg mt-4 leading-snug">{{ .Description }}</p>
+</article>

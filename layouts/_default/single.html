@@ -5,7 +5,7 @@
 {{ define "main" }}
   <div class="px-4 py-16">
     <div class="max-w-3xl mx-auto">
-      <p class="text-fuzzy-wuzzy font-semibold">{{ index $.Site.Data.months (printf "%d" .Date.Month) }} {{ .Date.Day }}, {{ .Date.Year }} · {{ .Params.author }}</p>
+      <p class="text-tuscan-red font-semibold">{{ index $.Site.Data.months (printf "%d" .Date.Month) }} {{ .Date.Day }}, {{ .Date.Year }} · {{ .Params.author }}</p>
       <h1 class="font-montserrat font-bold text-3xl leading-tight text-oxford">
         {{ .Title }}
       </h1>
